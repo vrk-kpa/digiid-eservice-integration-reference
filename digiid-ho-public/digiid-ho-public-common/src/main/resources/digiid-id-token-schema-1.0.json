@@ -1,0 +1,97 @@
+{
+  "$id": "https://id.cloud.dvv.fi/vdr/schemas/digiid-id-token-schema-1.0.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Self-Issued ID Token Validation",
+  "type": "object",
+  "required": [
+    "iss",
+    "aud",
+    "iat",
+    "exp",
+    "sub",
+    "auth_time",
+    "nonce",
+    "_vp_token"
+  ],
+  "properties": {
+    "iss": {
+      "type": "string",
+      "const": "https://self-issued.me/v2"
+    },
+    "aud": {
+      "type": "string",
+      "format": "uri"
+    },
+    "iat": {
+      "type": "integer"
+    },
+    "exp": {
+      "type": "integer"
+    },
+    "sub": {
+      "type": "string",
+      "format": "uri"
+    },
+    "auth_time": {
+      "type": "integer"
+    },
+    "nonce": {
+      "type": "string"
+    },
+    "_vp_token": {
+      "type": "object",
+      "required": [
+        "presentation_submission"
+      ],
+      "properties": {
+        "presentation_submission": {
+          "$ref": "#/$defs/presentation_submission"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "presentation_submission": {
+      "type": "object",
+      "required": [
+        "id",
+        "definition_id",
+        "descriptor_map"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "definition_id": {
+          "type": "string"
+        },
+        "descriptor_map": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/descriptor_map"
+          }
+        }
+      }
+    },
+    "descriptor_map": {
+      "type": "object",
+      "required": [
+        "id",
+        "format",
+        "path"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

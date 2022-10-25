@@ -1,0 +1,18 @@
+target
+
+# Temp files
+**/*.sw?
+**/pom.xml.versionsBackup
+
+# STS / Eclipse
+.classpath
+.metadata
+.project
+
+# IntelliJ IDEA
+.idea
+*.iml
+
+# Keys and certs
+/rest/src/main/resources/signing-certificate.pem
+/rest/src/main/resources/signing-private-key.pem

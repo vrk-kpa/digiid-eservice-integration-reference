@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>fi.dvv.digiid.ho</groupId>
+        <artifactId>digiid-ho-public-parent</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>fi.dvv.digiid.ho.op.restservice</groupId>
+    <artifactId>digiid-ho-public-op-rest-service-parent</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>domain</module>
+        <module>service</module>
+        <module>rest</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

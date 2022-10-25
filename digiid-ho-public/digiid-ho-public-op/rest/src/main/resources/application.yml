@@ -1,0 +1,42 @@
+server:
+  port: 8680
+  servlet:
+    context-path: "/"
+
+service:
+  name: "digiid-ho-op-rest-service"
+
+spring:
+  codec:
+    max-in-memory-size: 20MB
+  application:
+    name: ${service.name}
+  webflux:
+    base-path: "/"
+  sleuth:
+    baggage:
+      correlation-fields: "x-correlation-id"
+      remote-fields: "x-correlation-id"
+      tag-fields: "x-correlation-id"
+
+fi.dvv.digiid.op:
+  oidcClients:
+    - clientId: localhost
+      redirectUri: http://localhost:3030/auth/callback
+      publicKey: |
+        -----BEGIN CERTIFICATE-----
+        TODO Add certificate
+        -----END CERTIFICATE-----
+  oidcSiopUi: "http://localhost:3100/op-ui"
+  oidcUrl: "http://localhost:8680/op"
+  siopRedirect: "http://localhost:8680"
+  requireSignedAuthorize: false
+  useTestAcrValues: true
+  redis:
+    host: localhost
+    port: 6379
+    authtoken:
+
+fi.dvv.digiid.vdr:
+  allowedUrl: "http://localhost:8380/vdr"
+  timeoutSeconds: 30

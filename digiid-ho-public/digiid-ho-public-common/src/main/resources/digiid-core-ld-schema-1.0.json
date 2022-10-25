@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dvv": "https://dev.id.cloud.dvv.fi/vdr/schemas/digiid-core-schema-1.0.json#",
+    "DvvCoreId": {
+      "@id": "https://dev.id.cloud.dvv.fi/vdr/schemas/digiid-core-schema-1.0.json"
+    },
+    "age_over_15": {
+      "@id": "dvv:age_over_15",
+      "@type": "xsd:boolean"
+    },
+    "age_over_18": {
+      "@id": "dvv:age_over_18",
+      "@type": "xsd:boolean"
+    },
+    "age_over_20": {
+      "@id": "dvv:age_over_20",
+      "@type": "xsd:boolean"
+    },
+    "portrait": {
+      "@id": "dvv:portrait",
+      "@type": "xsd:string"
+    },
+    "given_name": {
+      "@id": "dvv:given_name",
+      "@type": "xsd:string"
+    },
+    "family_name": {
+      "@id": "dvv:family_name",
+      "@type": "xsd:string"
+    },
+    "sex": {
+      "@id": "dvv:sex",
+      "@type": "xsd:string"
+    },
+    "birth_date": {
+      "@id": "dvv:birth_date",
+      "@type": "xsd:date"
+    },
+    "nationality": {
+      "@id": "dvv:nationality",
+      "@type": "xsd:string"
+    },
+    "personal_identity_code": {
+      "@id": "dvv:personal_identity_code",
+      "@type": "xsd:string"
+    },
+    "document_id": {
+      "@id": "dvv:document_id",
+      "@type": "xsd:string"
+    },
+    "identification_method": {
+      "@id": "dvv:identification_method",
+      "@type": "xsd:string"
+    }
+  }
+}

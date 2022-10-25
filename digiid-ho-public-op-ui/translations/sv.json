@@ -1,0 +1,21 @@
+{
+  "common.title": "SV Digi-ID tunnistus",
+  "common.mainHeader": "SV Tunnistaudut palveluun",
+  "error.header": "SV Tunnistautuminen keskeytyi",
+  "error.expired": "SV Tunnistustapahtuma on vanhentunut.",
+  "common.cancel": "SV Keskeytä",
+  "qrmethod.header": "SV Tunnistaudu QR-koodilla",
+  "qrmethod.body1": "SV Avaa Digi-ID -sovellus toisella laitteella",
+  "qrmethod.body2": "SV Skannaa oheinen koodi painamalla “Lue QR-koodi” ja noudata saamiasi ohjeita",
+  "qrmethod.body3": "SV Voit halutessasi myös hyödyntää puhelimen kamerasovellusta QR-koodin lukemiseen.",
+  "qrmethod.qrcode": "SV QR-koodi",
+  "mobilemethod.open": "SV Avaa sovellus",
+  "mobilemethod.showAll": "SV Kaikki tunnistustavat",
+  "mobilemethod.body": "SV Jos Digi-ID -sovellus on käytössä tällä laitteella, voit tunnistautua sillä.",
+  "selector.header": "SV Valitse tunnistustapa",
+  "selector.method0": "SV Avaa sovellus",
+  "selector.method1": "SV QR-Koodi",
+  "success.header": "SV Tunnistautuminen onnistui",
+  "success.body1": "SV Mikäli sivu ei lataudu automaattisesti 10 sekunnin sisällä, voit siirtyä ",
+  "success.link": "SV tästä linkistä."
+}

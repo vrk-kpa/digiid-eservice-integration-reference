@@ -1,0 +1,13 @@
+target
+
+# Temp files
+.sw?
+
+# STS / Eclipse
+.classpath
+.metadata
+.project
+
+# IntelliJ IDEA
+.idea
+*.iml

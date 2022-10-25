@@ -1,0 +1,16 @@
+target
+
+# Temp files
+**/*.sw?
+**/pom.xml.versionsBackup
+
+# STS / Eclipse
+.classpath
+.metadata
+.project
+
+# IntelliJ IDEA
+.idea
+*.iml
+kubernetes/overlay/dev/op.key
+kubernetes/overlay/dev/op.crt

@@ -1,0 +1,178 @@
+{
+  "$id": "https://id.cloud.dvv.fi/vdr/schemas/digiid-core-schema-1.0.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Verifiable presentation",
+  "type": "object",
+  "required": [
+    "@context",
+    "type",
+    "verifiableCredential",
+    "proof",
+    "holder"
+  ],
+  "properties": {
+    "@context": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "const": "VerifiablePresentation"
+      }
+    },
+    "verifiableCredential": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/verifiableCredential"
+      }
+    },
+    "proof": {
+      "$ref": "#/$defs/proofPresentation"
+    },
+    "holder": {
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "$defs": {
+    "verifiableCredential": {
+      "type": "object",
+      "required": [
+        "@context",
+        "type",
+        "issuer",
+        "issuanceDate",
+        "credentialSubject",
+        "expirationDate",
+        "proof"
+      ],
+      "properties": {
+        "@context": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        },
+        "type": {
+          "type": "array",
+          "minItems": 2
+        },
+        "issuer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        "issuanceDate": {
+          "type": "string",
+          "pattern": "^(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ$"
+        },
+        "credentialSubject": {
+          "$ref": "#/$defs/credentialSubject"
+        },
+        "expirationDate": {
+          "type": "string",
+          "pattern": "^(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ$"
+        },
+        "proof": {
+          "$ref": "#/$defs/proofCredential"
+        }
+      }
+    },
+    "proofPresentation": {
+      "type": "object",
+      "required": [
+        "type",
+        "created",
+        "proofPurpose",
+        "verificationMethod",
+        "challenge",
+        "domain",
+        "jws"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "JsonWebSignature2020"
+        },
+        "created": {
+          "type": "string",
+          "pattern": "^(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ$"
+        },
+        "proofPurpose": {
+          "type": "string",
+          "const": "authentication"
+        },
+        "verificationMethod": {
+          "type": "string",
+          "format": "uri"
+        },
+        "challenge": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        },
+        "jws": {
+          "type": "string"
+        }
+      }
+    },
+    "credentialSubject": {
+      "type": "object",
+      "minProperties": 2,
+      "maxProperties": 2,
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "proofCredential": {
+      "type": "object",
+      "required": [
+        "type",
+        "created",
+        "proofPurpose",
+        "verificationMethod",
+        "jws"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "JsonWebSignature2020"
+        },
+        "created": {
+          "type": "string",
+          "pattern": "^(?:[1-9]\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ$"
+        },
+        "proofPurpose": {
+          "type": "string",
+          "const": "assertionMethod"
+        },
+        "verificationMethod": {
+          "type": "string",
+          "format": "uri"
+        },
+        "jws": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

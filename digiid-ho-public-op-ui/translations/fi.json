@@ -1,0 +1,21 @@
+{
+  "common.title": "Digi-ID tunnistus",
+  "common.mainHeader": "Tunnistaudut palveluun",
+  "error.header": "Tunnistautuminen keskeytyi",
+  "error.expired": "Tunnistustapahtuma on vanhentunut.",
+  "common.cancel": "Keskeytä",
+  "qrmethod.header": "Tunnistaudu QR-koodilla",
+  "qrmethod.body1": "Avaa testilompakko -sovellus toisessa selain-ikkunassa.",
+  "qrmethod.body2": "Kopioi QR-koodi URI:na hiiren oikealla näppäimellä.",
+  "qrmethod.body3": "Liitä kopioitu URI tekstinä lompakon SIOP-osuuden \"Login response\"-kenttään.",
+  "qrmethod.qrcode": "QR-koodi",
+  "mobilemethod.open": "Avaa sovellus",
+  "mobilemethod.showAll": "Kaikki tunnistustavat",
+  "mobilemethod.body": "Jos lompakko on käytössä tällä laitteella, voit tunnistautua sillä.",
+  "selector.header": "Valitse tunnistustapa",
+  "selector.method0": "Avaa sovellus",
+  "selector.method1": "QR-Koodi",
+  "success.header": "Tunnistautuminen onnistui",
+  "success.body1": "Mikäli sivu ei lataudu automaattisesti 10 sekunnin sisällä, voit siirtyä ",
+  "success.link": "tästä linkistä."
+}

@@ -1,0 +1,21 @@
+{
+  "common.title": "Digi-ID authentication",
+  "common.mainHeader": "You are authenticating to service",
+  "error.header": "Authentication aborted",
+  "error.expired": "Authentication expired.",
+  "common.cancel": "Cancel",
+  "qrmethod.header": "Authenticate with QR code",
+  "qrmethod.body1": "Open test wallet in other browser window and load coreID.",
+  "qrmethod.body2": "In this view, copy QR code as URI by pressing your right mouse button over QR-code.",
+  "qrmethod.body3": "Paste copied URI link as text to \"Login response\" field in test wallet SIOP section and continue there.",
+  "qrmethod.qrcode": "QR code",
+  "mobilemethod.open": "Open application",
+  "mobilemethod.showAll": "All authentication methods",
+  "mobilemethod.body": "If wallet is in use in this device, you can authenticate with it.",
+  "selector.header": "Choose authentication method",
+  "selector.method0": "Open application",
+  "selector.method1": "QR code",
+  "success.header": "Authentication successful",
+  "success.body1": "If page is not loading automatically within 10 seconds, you can click ",
+  "success.link": "this link."
+}

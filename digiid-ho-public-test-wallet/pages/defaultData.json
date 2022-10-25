@@ -1,0 +1,4 @@
+{
+  "backendSiop": "http://localhost:8680/siop/api/1.0",
+  "backendVdr": "http://localhost:8380/vdr/hyt"
+}

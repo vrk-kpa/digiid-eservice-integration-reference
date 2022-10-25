@@ -1,0 +1,23 @@
+server:
+  port: 8380
+  servlet.context-path: "/vdr"
+
+service:
+  name: "digiid-ho-vdr-service"
+
+spring:
+  codec:
+    max-in-memory-size: 20MB
+  application:
+    name: ${service.name}
+  webflux:
+    base-path: "/vdr"
+  sleuth:
+    baggage:
+      correlation-fields: "x-correlation-id"
+      remote-fields: "x-correlation-id"
+      tag-fields: "x-correlation-id"
+
+fi.dvv.digiid.vdr:
+  vdrUri: "localhost:8380"
+

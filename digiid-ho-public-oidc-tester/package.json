@@ -1,0 +1,22 @@
+{
+  "name": "criipto-nodejs-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-ensure-login": "^0.1.1",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "morgan": "^1.10.0",
+    "openid-client": "^3.13.0",
+    "passport": "^0.4.1"
+  }
+}

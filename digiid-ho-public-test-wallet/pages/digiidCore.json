@@ -1,0 +1,75 @@
+{
+  "id" : "digiid-core",
+  "input_descriptors" : [
+    {
+      "id" : "birth_date",
+      "constraints": {
+        "fields": [
+          {
+            "path": ["$.type"],
+            "filter": {
+              "type": "array",
+              "const": ["VerifiableCredential", "DvvCoreId", "birth_date"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id" : "family_name",
+      "constraints": {
+        "fields": [
+          {
+            "path": ["$.type"],
+            "filter": {
+              "type": "array",
+              "const": ["VerifiableCredential", "DvvCoreId", "family_name"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id" : "given_name",
+      "constraints": {
+        "fields": [
+          {
+            "path": ["$.type"],
+            "filter": {
+              "type": "array",
+              "const": ["VerifiableCredential", "DvvCoreId", "given_name"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id" : "personal_identity_code",
+      "constraints": {
+        "fields": [
+          {
+            "path": ["$.type"],
+            "filter": {
+              "type": "array",
+              "const": ["VerifiableCredential", "DvvCoreId", "personal_identity_code"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id" : "level_of_assurance",
+      "constraints": {
+        "fields": [
+          {
+            "path": ["$.type"],
+            "filter": {
+              "type": "array",
+              "const": ["VerifiableCredential", "DvvCoreId", "level_of_assurance"]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>fi.dvv.digiid.ho.vdr</groupId>
+        <artifactId>digiid-ho-public-vdr-service-parent</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>digiid-ho-public-vdr-client-impl</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- locally developed dependencies -->
+        <dependency>
+            <groupId>fi.dvv.digiid.ho.common</groupId>
+            <artifactId>digiid-ho-public-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>fi.dvv.digiid.ho.vdr</groupId>
+            <artifactId>digiid-ho-public-vdr-client-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fi.dvv.digiid.ho.vdr</groupId>
+            <artifactId>digiid-ho-public-vdr-domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- spring boot dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-reactive-httpclient</artifactId>
+        </dependency>
+
+        <!-- other dependencies -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

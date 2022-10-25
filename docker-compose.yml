@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+  digiid-ho-public-vdr-service:
+    container_name: digiid-ho-public-vdr
+    build:
+      context: ./digiid-ho-public
+      target: vdr
+    image: digiid-ho-public-vdr:latest
+    network_mode: host
+
+  digiid-ho-public-op-rest-service:
+    container_name: digiid-ho-public-op
+    build:
+      context: ./digiid-ho-public
+      target: op_rest
+    image: digiid-ho-public-op:latest
+    network_mode: host
+
+  digiid-ho-public-test-wallet:
+    container_name: digiid-ho-public-test-wallet
+    build:
+      context: ./digiid-ho-public-test-wallet
+    image: digiid-ho-public-test-wallet:latest
+    network_mode: host
+
+  digiid-ho-public-op-ui:
+    container_name: digiid-ho-public-op-ui
+    build:
+      context: ./digiid-ho-public-op-ui
+      target: runner
+      args:
+        ENVIRONMENT: local
+    image: digiid-ho-public-op-ui:latest
+    network_mode: host
+
+  digiid-ho-public-oidc-tester:
+    container_name: digiid-ho-public-oidc-tester
+    build:
+      context: ./digiid-ho-public-oidc-tester
+    image: digiid-ho-public-oidc-tester:latest
+    depends_on:
+      - "digiid-ho-public-op-rest-service"
+    network_mode: host
+
+  digiid-redis:
+    container_name: digiid-redis
+    image: "redis:6"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    network_mode: host

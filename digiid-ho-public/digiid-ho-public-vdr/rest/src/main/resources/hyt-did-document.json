@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "did:web:localhost%3A8380:vdr:hyt:hyt060168-9861",
+  "verificationMethod": [
+    {
+      "id": "did:web:localhost%3A8380:vdr:hyt:hyt060168-9861#key-6aff5949-7eef-4fac-9eb8-772e391a2021",
+      "type": "JsonWebKey2020",
+      "controller": "did:web:localhost%3A8380:vdr:issuer:56e8b13b-f8ab-4e7d-9250-a106f24e6cdf#key-92d3651a-0868-4886-b70d-4a35b0493fb1",
+      "publicKeyJwk": {
+        "kty": "EC",
+        "x5t#S256": "vgHApjd4md6wJdXbDSMO7ol07UqTcvxHA6eiGltbQpw",
+        "crv": "P-256",
+        "kid": "2855339962",
+        "x5c": [
+          "MIIC6DCB0aADAgECAgUAqjEHujANBgkqhkiG9w0BAQsFADAeMRwwGgYDVQQDDBNUZXN0IENlcnQgQXV0aG9yaXR5MB4XDTIyMTAyMDExMjAwM1oXDTIzMTAyMDExMjAwM1owGTEXMBUGA1UEAwwOaHl0MDYwMTY4LTk4NjEwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARiUy+OgxiR4LPU8JDlqCBMmlTeLBLYMH7HPQgckkgGBhyKKeCrKFouqzJRtt3DJnkhxA1mIhDcphYASb8lEb3OMA0GCSqGSIb3DQEBCwUAA4ICAQA3yNqAENzO1HmJllmNM1UKRfHMJ8EwUXO7sknZUqHVS53thkdKFj4KnhCRorGkinrFr20co3JDX2vxXvi1azCj91ENI1YNeNNXt5NldAEA2eNbkCRIsl78rlN9U8MaL0YP0r4xqt+XzPAqpxQ/RMmJYcS2f+2Mvqg/nY6H+wAizelUNltJFIkQ/ODZj0BSs0jZ4SAMAHZD+p7Mbwm1QqL8u3pzynHb7eQRQEbZid+qwtVrRNA6kV7FFcHQxqzgXsP9o8tRicC6TY8PFTXnYWcivBoOYzmBNcW2idpGy1OC9UU7WQ5bFFQ0FHA8/Obtl+KYDItSpLoFXBvJ90jVV5LQLfa5+oF0gxbybQERFSBIUHRYVeXndmaNzYJGAmiFzd9gk23l0qKpfYpFQnuZNf0J+OcuLQ1mhSGb5zHHV1+ZlEbh41rE2ZVN95TA3x7673xE04XWltvzEaMOzaZYl8ypumyUsKgOQLJy4qpd+o8/9IicUQt8iqIpGhBBXZCOMtwapY2wYZa+FsUWpt2LWINnwDUb7oc2Y0YYa9YEMh4RfqPU4IZffB5QKYWGkOiqL/G0OXOiue3UoEJkEJOFH5V8W15VWuIvrYNZ84w2KfC11qmGghhUIUCINEfXqxWSfsV2qrr6KYftiH0wHWIPrz7V3jxOSzZzFzOM48dBcIAWoQ=="
+        ],
+        "x": "YlMvjoMYkeCz1PCQ5aggTJpU3iwS2DB-xz0IHJJIBgY",
+        "y": "HIop4KsoWi6rMlG23cMmeSHEDWYiENymFgBJvyURvc4"
+      }
+    }
+  ],
+  "authentication": [
+    "#key-6aff5949-7eef-4fac-9eb8-772e391a2021"
+  ],
+  "assertionMethod": [
+    "#key-6aff5949-7eef-4fac-9eb8-772e391a2021"
+  ],
+  "controller": [
+    "did:web:localhost%3A8380:vdr:issuer:56e8b13b-f8ab-4e7d-9250-a106f24e6cdf#key-92d3651a-0868-4886-b70d-4a35b0493fb1"
+  ]
+}
