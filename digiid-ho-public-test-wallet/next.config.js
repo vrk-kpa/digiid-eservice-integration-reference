@@ -1,6 +1,4 @@
 module.exports = {
   basePath: '',
-  experimental: {
-    outputStandalone: true,
-  },
+  output: 'standalone',
 }

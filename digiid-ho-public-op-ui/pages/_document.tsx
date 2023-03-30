@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap"
           />
-          {(this.props as any).styles}
+          {this.props.styles}
         </Head>
         <body>
           <Main />
@@ -32,7 +32,7 @@ MyDocument.getInitialProps = async (ctx) => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App: any) =>
+      enhanceApp: (App) =>
         function EnhanceApp(props) {
           return sheet.collectStyles(
             materialUiSheets.collect(<App {...props} />),

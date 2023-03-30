@@ -3,8 +3,8 @@
 import { Box } from "@mui/material";
 import axios from "axios";
 import type { NextPage } from "next";
-import { useUserAgent } from "next-useragent";
 import { useRouter } from "next/router";
+import { useUserAgent } from "next-useragent";
 import React from "react";
 import { useIntl } from "react-intl";
 import { Button, Text, defaultSuomifiTheme } from "suomifi-ui-components";
@@ -15,11 +15,11 @@ import MobileMethod from "../components/MobileMethod";
 import QrCodeMethod from "../components/QrCodeMethod";
 import useInterval from "../utils/useInterval";
 
-const MainPage: NextPage = (props) => {
+const MainPage: NextPage<{
+  uaString?: string;
+}> = (props) => {
   const ua = useUserAgent(
-    (props as any).uaString
-      ? (props as any).uaString
-      : window.navigator.userAgent,
+    props.uaString ? props.uaString : window.navigator.userAgent,
   );
 
   const router = useRouter();
@@ -77,7 +77,7 @@ const MainPage: NextPage = (props) => {
           window.location.href = status.redirect;
         }
       }
-    } catch (err: any) {
+    } catch (_err) {
       router.replace("/error?ftn_spname=" + ftn_spname);
     }
   }, pollInterval);
@@ -126,7 +126,13 @@ const MainPage: NextPage = (props) => {
 
 export default MainPage;
 
-export function getServerSideProps(context: any) {
+export function getServerSideProps(context: {
+  req: {
+    headers: {
+      "user-agent": string;
+    };
+  };
+}) {
   return {
     props: {
       uaString: context.req.headers["user-agent"],

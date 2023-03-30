@@ -2,9 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   basePath: '/op-ui',
-  experimental: {
-    outputStandalone: true,
-  },
+  output: 'standalone',
   compiler: {
     // ssr and displayName are configured by default
     styledComponents: true,
