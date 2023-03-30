@@ -1,5 +1,10 @@
 # digiid-eservice-integration-reference
 
+## ℹ️ Code development halted as of 2023-03-31
+Code development in this repository has been halted indefinitely due to there not being enough time in the current session of the Finnish Parliament for passing the necessary digital identity legislation. [Read more](https://dvv.fi/-/digitaalisen-henkilollisyyden-uudistus-keskeytyi?languageId=en_US).
+
+## Description
+
 In this repository [DVV](https://dvv.fi) (Finnish Digital and Population Data Services Agency) publishes [Digi-ID](https://wiki.dvv.fi/x/Zrc_CQ) e-service integration reference code. The published code is intended as a reference for stakeholder developers. The reference code aims to help these parties better understand the technical implementation and the authentication flows of the Digi-ID system. Another goal is to accelerate the development of authentication solutions that integrate with the Suomi.fi Wallet mobile application.
 
 DVV maintains the code according to its own schedule. The code is not intended for production use. The implementation, interfaces and other solutions in this repository do not necessarily align with the implementations in DVV's test and production environments. Please, note that the Self-Issued OpenID Provider v2 specification and other specifications that this reference is based on are not yet finalised. It is possible that some changes might occur before Suomi.fi Wallet is published into production use. Some features, such as the management of relying parties, are still in the development pipeline and are not included in this reference.
