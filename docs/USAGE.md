@@ -44,11 +44,11 @@ Open "CoreId" accordion. Fetch a test identity from a local file with "FETCH COR
 
 ### Open relying party view (OIDC tester)
 
-Navigate to http://localhost:3030 in a second browser window/tab.
+Navigate to http://localhost:**3030** in a second browser window/tab.
 
 The view in the second window/tab simulates a relying party's login view. Choose "Login" and you are redirected to the OIDC adapter (op/op-ui).
 
-Op-ui displays a QR code. Within the QR code, there is a `openid` scheme URI for a SIOP authentication request. This would in reality be read by the Suomi.fi Wallet mobile application.
+Op-ui displays a QR code. Within the QR code, there is an `openid` scheme URI for a SIOP authentication request. This would in reality be read by the Suomi.fi Wallet mobile application.
 
 Copy the QR code as a URI by pressing your right mouse button over the QR code and choosing "Copy link address" (or similar). Paste the copied URI as text into the "Login response" field in the "SIOP" section of the test wallet UI that is open in the other window/tab. Continue the authentication flow from there.
 

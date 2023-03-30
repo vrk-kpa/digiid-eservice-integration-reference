@@ -22,16 +22,14 @@ cd digiid-eservice-integration-reference
 1. Generate a private key.
 
 ```sh
-openssl genrsa -out digiid-ho-public-oidc-tester/client-private-key.pem 4096
+openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:4096 -outform PEM -out digiid-ho-public-oidc-tester/client-private-key.pem
 ```
 
 2. Generate a certificate. Certificate generation command requires the private key generated in the previous step as input.
 
 ```sh
-openssl req -new -x509 -key digiid-ho-public-oidc-tester/client-private-key.pem -out digiid-ho-public-oidc-tester/client-certificate.pem -days 365
+openssl req -batch -new -x509 -sha256 -days 365 -key digiid-ho-public-oidc-tester/client-private-key.pem -outform PEM -out digiid-ho-public-oidc-tester/client-certificate.pem
 ```
-
-All attributes asked by `openssl` can be left blank or to their default values (in some platforms it is needed to set a value to Country Code/Name attribute (e.g. 'FI')).
 
 Copy the **contents of this certificate file** into a section `fi.dvv.digiid.op.oidcClients.publicKey` (marked with *TODO add certificate*) in file: digiid-ho-public/digiid-ho-public-op/rest/src/main/resources/application.yml
 
@@ -71,16 +69,14 @@ fi.dvv.digiid.op:
 3. Generate a signing key.
 
 ```sh
-openssl genrsa -out digiid-ho-public/digiid-ho-public-op/rest/src/main/resources/signing-private-key.pem 4096
+openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:4096 -outform PEM -out digiid-ho-public/digiid-ho-public-op/rest/src/main/resources/signing-private-key.pem
 ```
 
 4. Generate a signing certificate.
 
 ```sh
-openssl req -new -x509 -key digiid-ho-public/digiid-ho-public-op/rest/src/main/resources/signing-private-key.pem -out digiid-ho-public/digiid-ho-public-op/rest/src/main/resources/signing-certificate.pem -days 365
+openssl req -batch -new -x509 -sha256 -days 365 -key digiid-ho-public/digiid-ho-public-op/rest/src/main/resources/signing-private-key.pem -outform PEM -out digiid-ho-public/digiid-ho-public-op/rest/src/main/resources/signing-certificate.pem
 ```
-
-All attributes asked by `openssl` can be left blank or to their default values. (in some platforms it is needed to set a value to Country Code/Name attribute (e.g. 'FI'))
 
 ## Build and run applications with Docker Compose
 
